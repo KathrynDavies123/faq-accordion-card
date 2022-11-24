@@ -7,6 +7,12 @@
     100% {opacity:1};
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Kumbh Sans', sans-serif;
 }
@@ -17,6 +23,7 @@ body {
     align-items: center;
     height:100vh;
     background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    overflow: hidden;
 }
 
 main {
@@ -25,17 +32,47 @@ main {
     background-color: white;
     gap:5rem;
     align-items: center;
-    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+button {
+    background-color: white;
+    border: none;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+p {
+    max-width: 300px;
+}
+
+.imgcontainer {
+    margin-left: -8%;
 }
 
 .imgbox {
     position:absolute;
-    top:410px;
-    left:130px;
+    top:375px;
+    left:245px;
+}
+
+article > div {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding: 3% 0;
 }
 
 .faqaccordion {
     display: flex;
+    justify-content: space-between;
 }
 
 .faqaccordion:hover {
