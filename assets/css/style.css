@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* font-family: 'Kumbh Sans', sans-serif; */
+
+@keyframes fadein {
+    0% {opacity:0};
+    100% {opacity:1};
+}
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+    display:flex;
+    height:500px;
+    background-color: white;
+    gap:5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgbox {
+    position:absolute;
+    top:410px;
+    left:130px;
+}
+
+.faqaccordion {
+    display: flex;
+}
+
+.faqaccordion:hover {
+    cursor: pointer;
+}
+
+.faqexpand {
+    display: none;
+    animation: fadein;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}

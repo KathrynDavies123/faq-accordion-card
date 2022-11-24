@@ -1,29 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Frontend Mentor | FAQ Accordion Card</title>
-</head>
-<body>
-  <!-- How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
-
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
-
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours. -->
-  <script src="./assets/js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <main>
+      <div class="imgcontainer">
+        <img src="./assets/images/illustration-box-desktop.svg" alt="" class="imgbox">
+        <img src="./assets/images/illustration-woman-online-desktop.svg" alt="" class="imgwomanonline">
+      </div>
+      <section class="faq">
+        <h1>FAQ</h1>
+        <article>
+          <div>
+            <div class="faqaccordion">
+              <h2>How many team members can I invite?</h2>
+              <button>
+                <img
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt="arrow down icon"
+                />
+              </button>
+            </div>
+            <p class="faqexpand">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </div>
+          <div>
+            <div class="faqaccordion">
+              <h2>What is the maximum file upload size?</h2>
+              <button>
+                <img
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt="arrow down icon"
+                />
+              </button>
+            </div>
+            <p class="faqexpand">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </div>
+          <div>
+            <div class="faqaccordion">
+              <h2>How do I reset my password?</h2>
+              <button>
+                <img
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt="arrow down icon"
+                />
+              </button>
+            </div>
+            <p class="faqexpand">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </div>
+          <div>
+            <div class="faqaccordion">
+              <h2>Can I cancel my subscription?</h2>
+              <button>
+                <img
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt="arrow down icon"
+                />
+              </button>
+            </div>
+            <p class="faqexpand">
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </div>
+          <div>
+            <div class="faqaccordion">
+              <h2>Do you provide additional support?</h2>
+              <button>
+                <img
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt="arrow down icon"
+                />
+              </button>
+            </div>
+            <p class="faqexpand">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
