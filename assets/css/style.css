@@ -28,17 +28,35 @@ body {
 
 main {
     display:flex;
-    height:500px;
+    height:65%;
+    width:65%;
     background-color: white;
-    gap:5rem;
+    justify-content: space-around;
     align-items: center;
     overflow: hidden;
     border-radius: 20px;
 }
 
+section {
+    height: 80%;
+    width:45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+article {
+    height: 80%;
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 h1 {
     font-size: 2rem;
     font-weight: 700;
+    color:hsl(238, 29%, 16%);
 }
 
 button {
@@ -49,34 +67,52 @@ button {
 h2 {
     font-size: 1rem;
     font-weight: 400;
-}
-
-p {
-    max-width: 300px;
+    color:hsl(237, 12%, 33%);
 }
 
 .imgcontainer {
-    margin-left: -8%;
+    margin-left: -12%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 150% cover;
 }
 
 .imgbox {
     position:absolute;
-    top:375px;
-    left:245px;
+    top:360px;
+    left:180px;
 }
 
-article > div {
+.faqcontainer {
     border-bottom: 1px solid hsl(240, 5%, 91%);
-    padding: 3% 0;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
 }
 
 .faqaccordion {
     display: flex;
     justify-content: space-between;
+    width:100%;
 }
 
-.faqaccordion:hover {
+.expanded h2 {
+    font-weight:700;
+    color:hsl(238, 29%, 16%);
+}
+
+.faqaccordion:hover h2{
     cursor: pointer;
+    color:hsl(14, 88%, 65%);
+}
+
+.arrowrotate {
+    transform: rotateX(180deg);
 }
 
 .faqexpand {
@@ -84,4 +120,7 @@ article > div {
     animation: fadein;
     animation-timing-function: ease-out;
     animation-duration: 1s;
+    font-size:0.8rem;
+    max-width: 500px;
+    color:hsl(240, 6%, 50%);
 }
