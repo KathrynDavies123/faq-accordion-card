@@ -24,13 +24,123 @@ html {
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100vh;
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  padding-top: 5%;
+  padding-bottom:20%;
 }
 
 main {
+  background-color: white;
+  border-radius: 25px;
+  min-width:325px;
+  min-height:500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0 5px 30px hsl(238, 29%, 16%);
+
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  align-items: center;
+  min-height:350px;
+}
+
+article {
+    width:100%;
+    padding:0 7%;
+}
+
+h1 {
+  font-size: 2rem;
+  color: hsl(238, 29%, 16%);
+}
+
+h2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: hsl(237, 12%, 33%);
+  padding:6% 0;
+}
+
+.expanded h2 {
+  padding: 5% 0 1% 0;
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+
+p {
+  font-size: 0.7rem;
+  color: hsl(240, 6%, 50%);
+  animation: fadein;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  max-width: 250px;
+  padding-bottom: 5%;
+  display: none;
+}
+
+button {
+  background-color: white;
+  border: none;
+}
+
+.expanded button {
+    padding-bottom:5%;
+}
+
+.imgcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imgbox,
+.imgwomanonlinedesktop {
+  display: none;
+}
+
+.imgcontainer {
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height:100px;
+}
+
+.imgwomanonlinemobile {
+  width: 250px;
+  position:absolute;
+  top:20px;
+  right:65px;
+}
+
+.faqcontainer {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.faqaccordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqaccordion:hover h2 {
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+}
+
+.arrowrotate {
+    transform: rotateX(180deg);
+}
+
+/* main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,4 +299,4 @@ h2 {
   .faqcontainer {
     padding: 5% 0;
   }
-}
+} */
