@@ -1,126 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 /* font-family: 'Kumbh Sans', sans-serif; */
 
 @keyframes fadein {
-    0% {opacity:0};
-    100% {opacity:1};
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 body {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
-    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  padding-top: 5%;
 }
 
 main {
-    display:flex;
-    height:65%;
-    width:65%;
-    background-color: white;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: 90%;
+  justify-content: center;
+  background-color: white;
+  border-radius: 25px;
 }
 
 section {
-    height: 80%;
-    width:45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 article {
-    height: 80%;
-    width:90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color:hsl(238, 29%, 16%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+  text-align: center;
 }
 
 button {
-    background-color: white;
-    border: none;
+  background-color: white;
+  border: none;
 }
 
 h2 {
-    font-size: 1rem;
-    font-weight: 400;
-    color:hsl(237, 12%, 33%);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: hsl(237, 12%, 33%);
 }
 
 .imgcontainer {
-    margin-left: -12%;
-    height:100%;
-    display: flex;
-    align-items: center;
-    background-image: url("../images/bg-pattern-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: 150% cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  width: 70%;
+  margin-top: -42%;
+  background-image: url("../images/bg-pattern-mobile.svg");
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.imgcontainer img {
+  width: 100%;
+}
+
+.imgwomanonlinedesktop {
+  display: none;
 }
 
 .imgbox {
-    position:absolute;
-    top:360px;
-    left:180px;
+  display: none;
 }
 
 .faqcontainer {
-    border-bottom: 1px solid hsl(240, 5%, 91%);
-    padding: 5% 0;
-    display: flex;
-    flex-direction: column;
-    gap:0.8rem;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
 .faqaccordion {
-    display: flex;
-    justify-content: space-between;
-    width:100%;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
 }
 
 .expanded h2 {
-    font-weight:700;
-    color:hsl(238, 29%, 16%);
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
 }
 
-.faqaccordion:hover h2{
-    cursor: pointer;
-    color:hsl(14, 88%, 65%);
+.faqaccordion:hover h2 {
+  cursor: pointer;
+  color: hsl(14, 88%, 65%);
 }
 
 .arrowrotate {
-    transform: rotateX(180deg);
+  transform: rotateX(180deg);
 }
 
 .faqexpand {
+  display: none;
+  animation: fadein;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  font-size: 0.8rem;
+  max-width: 280px;
+  color: hsl(240, 6%, 50%);
+}
+
+@media (min-width: 1440px) {
+  main {
+    height: 65%;
+    width: 65%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  section {
+    width: 45%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .imgcontainer {
+    margin-left: -12%;
+    height: 100%;
+    align-items: center;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-position: center right;
+    background-size: 150% cover;
+  }
+
+  .imgwomanonlinedesktop {
+    display: block;
+  }
+
+  .imgwomanonlinemobile {
     display: none;
-    animation: fadein;
-    animation-timing-function: ease-out;
-    animation-duration: 1s;
-    font-size:0.8rem;
-    max-width: 500px;
-    color:hsl(240, 6%, 50%);
+  }
+
+  .imgbox {
+    display: block;
+    position: absolute;
+    top: 360px;
+    left: 180px;
+  }
+
+  .faqcontainer {
+    padding: 5% 0;
+  }
 }
